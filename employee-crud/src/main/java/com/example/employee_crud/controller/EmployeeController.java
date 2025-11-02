@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/employees")
+@CrossOrigin(origins = "http://localhost:5173")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
@@ -45,4 +46,5 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         return "Employee deleted successfully with id: " + id;
     }
+
 }
